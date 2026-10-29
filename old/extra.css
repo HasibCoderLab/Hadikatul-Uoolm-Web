@@ -1,0 +1,102 @@
+
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #ccc;  
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+    background: #999;  
+    }
+
+
+    @keyframes appear {
+        from {
+          opacity: 0;
+          scale: 0.8;
+        }
+        to {
+          opacity: 1;
+          scale: 1;
+        }
+      }
+
+      .animationop {
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 36%;
+      }
+    @keyframes last {
+        from {
+          opacity: 0;
+          scale: 0.8;
+        }
+        to {
+          opacity: 1;
+          scale: 1;
+        }
+      }
+
+      .lastani {
+        animation: last linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 20%;
+      }
+    @keyframes first{
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .firstop {
+        animation: first 1.8s linear;
+      }
+    @keyframes filter{
+        from {
+          opacity: 0.9;
+        }
+        to {
+          opacity: 0.2;
+        }
+      }
+
+      .background {
+        animation: filter 1s linear;
+      }
+
+
+      @media (orientation: portrait){
+ 
+
+        @keyframes appear {
+          from {
+            opacity: 0;
+            scale: 0.8;
+          }
+          to {
+            opacity: 1;
+            scale: 1;
+          }
+        }
+  
+        .animationop {
+          animation: appear linear;
+          animation-timeline: view();
+          animation-range: entry 0% cover 20%;
+        }
+        
+      }

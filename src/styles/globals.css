@@ -1,0 +1,216 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* ==========================================================================
+   Tailwind theme — the single mapping of src/styles/tokens.css into utilities.
+   Values are audited (docs/DESIGN_AUDIT.md §3); nothing is invented.
+   ========================================================================== */
+@theme inline {
+  /* ---- colour ---- */
+  --color-brand-50: var(--hu-green-50);
+  --color-brand-500: var(--hu-green-500);
+  --color-brand-600: var(--hu-green-600);
+  --color-brand-700: var(--hu-green-700);
+  --color-gold-500: var(--hu-gold-500);
+  --color-gold-600: var(--hu-gold-600);
+  --color-tint-blue: var(--hu-blue-tint);
+  --color-tint-gray: var(--hu-gray-50);
+  --color-surface-muted: var(--hu-gray-100);
+  --color-surface-menu: var(--hu-gray-150);
+  --color-surface-panel: var(--hu-gray-200);
+  --color-ink-700: var(--hu-ink-700);
+  --color-ink-500: var(--hu-ink-500);
+  --color-ink-200: var(--hu-ink-200);
+  --color-line: var(--hu-line);
+  --color-stat-blue: var(--hu-stat-blue);
+  --color-stat-coral: var(--hu-stat-coral);
+  --color-facebook-500: var(--hu-facebook-500);
+  --color-facebook-600: var(--hu-facebook-600);
+
+  /* ---- type ---- */
+  --font-sans: var(--hu-font-sans);
+
+  /* phone → tablet (md) → desktop (lg), exactly the legacy 3-step scale */
+  --text-hero: var(--hu-text-hero-sm);
+  --text-hero-md: var(--hu-text-hero-md);
+  --text-hero-lg: var(--hu-text-hero);
+
+  --text-hero-sub: var(--hu-text-hero-sub-sm);
+  --text-hero-sub-md: var(--hu-text-hero-sub-md);
+  --text-hero-sub-lg: var(--hu-text-hero-sub);
+
+  --text-hero-eyebrow: var(--hu-text-hero-eyebrow-sm);
+  --text-hero-eyebrow-md: var(--hu-text-hero-eyebrow-md);
+
+  --text-section: var(--hu-text-section-sm);
+  --text-section-md: var(--hu-text-section-md);
+  --text-section-lg: var(--hu-text-section);
+
+  --text-section-sub: var(--hu-text-section-sub-sm);
+  --text-section-sub-md: var(--hu-text-section-sub);
+
+  --text-card-title: var(--hu-text-card-title-sm);
+  --text-card-title-md: var(--hu-text-card-title);
+  --text-card-sub: var(--hu-text-card-body-sm);
+  --text-card-sub-md: var(--hu-text-card-body);
+
+  --text-stat: var(--hu-text-stat-sm);
+  --text-stat-md: var(--hu-text-stat);
+  --text-stat-label: var(--hu-text-stat-label-sm);
+  --text-stat-label-md: var(--hu-text-stat-label);
+
+  --text-nav: var(--hu-text-nav-sm);
+  --text-nav-lg: var(--hu-text-nav);
+  --text-micro: var(--hu-text-topbar);
+  --text-button: var(--hu-text-button-sm);
+  --text-button-md: var(--hu-text-button);
+  --text-body: var(--hu-text-body-sm);
+  --text-body-md: var(--hu-text-body);
+  --text-footer-heading: var(--hu-text-footer-heading);
+  --text-footer-link: var(--hu-text-footer-link-sm);
+  --text-footer-link-md: var(--hu-text-footer-link);
+
+  /* ---- radius ---- */
+  --radius-sm: var(--hu-radius-sm);
+  --radius-md: var(--hu-radius-md);
+  --radius-lg: var(--hu-radius-lg);
+  --radius-xl: var(--hu-radius-xl);
+
+  /* ---- shadow ---- */
+  --shadow-nav: var(--hu-shadow-nav);
+  --shadow-card: var(--hu-shadow-card);
+  --shadow-panel: var(--hu-shadow-panel);
+  --shadow-panel-sm: var(--hu-shadow-panel-sm);
+  --shadow-hero-text: var(--hu-shadow-hero-text);
+  --shadow-stat-text: var(--hu-shadow-stat-text);
+
+  /* ---- spacing ----
+     Only header heights are exposed as spacing utilities (`h-nav`,
+     `h-topbar`). The audited spacing rhythm must NOT be published as
+     `--spacing-sm/md/lg/xl`, because Tailwind derives its named size scale
+     (`max-w-sm`, `w-md`, …) from those same variables — doing so silently
+     collapsed `max-w-sm` to 12px. Rhythm values stay in tokens.css and are
+     used as explicit pixel utilities in components. */
+  --spacing-nav: var(--hu-nav-height);
+  --spacing-topbar: var(--hu-topbar-height);
+}
+
+/* Breakpoints must be literal — `var()` is invalid inside a media query.
+   These are the audited max-width queries converted to mobile-first
+   min-widths (≤498 → 500, ≤793 → 794, ≤950/920 → 921, ≤1100 → 1101,
+   ≤1600 → 1601). See docs/DESIGN_AUDIT.md §3.6. */
+@theme {
+  --breakpoint-sm: 500px;
+  --breakpoint-md: 794px;
+  --breakpoint-lg: 921px;
+  --breakpoint-xl: 1101px;
+  --breakpoint-2xl: 1601px;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    /* keep anchored sections clear of the sticky header */
+    scroll-padding-top: var(--hu-nav-height-desktop);
+  }
+
+  @media (width < 794px) {
+    html {
+      scroll-padding-top: var(--hu-nav-height);
+    }
+  }
+
+  body {
+    background-color: var(--hu-white);
+    color: var(--hu-ink-700);
+    font-family: var(--hu-font-sans);
+    font-weight: var(--hu-weight-body);
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+    /* Bengali needs a little more air than Latin at the same size */
+    line-height: 1.6;
+  }
+
+  /* Logical properties only: `dir="rtl"` must never need a layout rewrite. */
+  :where(a, button, [tabindex]):focus-visible {
+    outline: 2px solid var(--hu-green-600);
+    outline-offset: 2px;
+    border-radius: var(--hu-radius-sm);
+  }
+
+  ::selection {
+    background-color: var(--hu-green-50);
+    color: var(--hu-green-700);
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--hu-scrollbar-track);
+    border-radius: var(--hu-radius-md);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--hu-scrollbar-thumb);
+    border-radius: var(--hu-radius-md);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--hu-scrollbar-thumb-hover);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ==========================================================================
+   Shared layout helpers
+   ========================================================================== */
+@layer components {
+  .hu-container {
+    width: var(--hu-container);
+    margin-inline: auto;
+  }
+
+  /* Scroll-driven reveal. Content is visible by default; the animation only
+     runs on browsers with `animation-timeline` support, so the legacy
+     "invisible until scrolled" failure mode cannot happen. */
+  .hu-reveal {
+    opacity: 1;
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .hu-reveal {
+        animation: hu-appear linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 36%;
+      }
+    }
+  }
+
+  @keyframes hu-appear {
+    from {
+      opacity: 0;
+      scale: 0.8;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+}

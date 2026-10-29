@@ -1,0 +1,771 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+* {
+    font-family: "Baloo Da 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Starts From Here  */
+
+nav {
+    height: 100px;
+    box-shadow: 2px 2px 15px 2px rgba(75, 74, 74, 0.473);
+    position: sticky;
+    top: 0;
+    z-index: 6;
+}
+
+.topnav {
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+    background-image: linear-gradient(45deg, #f1c40f, green, #1e8449);
+}
+.cancle{
+    display: none;
+}
+
+.glcont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topnavsvg {
+    width: 19px;
+}
+
+.topcall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.topgmail,
+.toplocation,
+.topcall div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 0px 36px;
+}
+
+.topgmail span,
+.toplocation span,
+.topcall span {
+    font-size: 14px;
+}
+
+.bottomnav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100% - 36px);
+    background-color: white;
+}
+
+.brand {
+    margin: 12px;
+}
+
+.brand img {
+    width: 200px;
+}
+
+.bottomnav ul {
+    display: flex;
+    gap: 18px;
+}
+
+.bottomnav ul li {
+    list-style: none;
+}
+
+.bottomnav ul li a {
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #424949;
+}
+
+.navoptions {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.navoptions button {
+    font-size: 15px;
+    padding: 10px 26px;
+    border: none;
+    color: white;
+    background-color: #1e8449;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.navoptions ul li a button {
+    display: none;
+}
+
+.navoptions button:hover {
+    background-color: #196f3d;
+}
+
+.bottomnav ul li a:hover {
+    color: #196f3d;
+}
+
+.hamburger{
+   display: none;
+   margin: 16px;
+   margin-top: 18px;
+}
+
+
+
+/* First secrion starts from here */
+
+
+.maintopic {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maintopic img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+
+.filter {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.titlebox {
+    width: 80vw;
+    min-height: 50vh;
+}
+
+.titlebox p {
+    font-weight: 600;
+    color: white;
+    position: relative;
+    top: 36px;
+    left: 6px;
+    text-shadow: 2px 2px 4px #626567;
+}
+
+.titlebox h1 span,
+.titlebox h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 4px #626567;
+}
+
+.titlebox h1 span {
+    display: block;
+    position: relative;
+    top: 24px;
+}
+
+.titlebox h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    bottom: 12px;
+    text-shadow: 2px 2px 4px #626567;
+}
+
+.titlebox button {
+    font-size: 15px;
+    padding: 10px 26px;
+    border: none;
+    color: white;
+    background-color: #f1c40f;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 12px;
+}
+
+.titlebox button:hover {
+    background-color: #d4ac0d;
+}
+
+
+/* 2nd section starts from here */
+
+.wehave {
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    padding: 52px;
+}
+
+.this {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.students,
+.mentors,
+.experience,
+.coaching {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.students p,
+.mentors p,
+.experience p,
+.coaching p {
+    font-size: 18px;
+    text-shadow: 3px 3px 4px #d7dbdd;
+}
+
+.students h2 {
+    font-size: 36px;
+    font-weight: 650;
+    color: #1e8449;
+    text-shadow: 3px 3px 4px #d7dbdd;
+}
+
+.mentors h2 {
+    font-size: 36px;
+    font-weight: 650;
+    color: rgb(61, 175, 253);
+    text-shadow: 3px 3px 4px #d7dbdd;
+}
+
+.experience h2 {
+    font-size: 36px;
+    font-weight: 650;
+    color: rgb(255, 110, 118);
+    text-shadow: 3px 3px 4px #d7dbdd;
+}
+
+.coaching h2 {
+    font-size: 36px;
+    font-weight: 650;
+    color: #f1c40f;
+    text-shadow: 3px 3px 4px #d7dbdd;
+}
+
+
+/* 3rd section starts from here */
+
+
+.academicprogram {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    background-color: #eafaf1;
+    position: relative;
+    padding: 24px;
+}
+
+.teaching {
+    width: 150px;
+    position: absolute;
+    left: 16px;
+    bottom: -8px;
+
+}
+
+.academicprogram h2 {
+    font-size: 46px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.academicprogram h3 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.programs {
+    width: 70vw;
+    min-height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 36px;
+    margin: 24px;
+}
+
+.onetoeight {
+    width: 500px;
+    height: 150px;
+    border-radius: 10px;
+    border: 1px solid #7b7d7d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 12px;
+}
+
+.onetoeight:hover {
+    border: 1px solid #239b56;
+    background-color: #f0f3f4;
+}
+
+.contain {
+    display: flex;
+    align-items: center;
+}
+
+.info h2 {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.info p {
+    font-size: 17px;
+}
+
+.onetoeight img {
+    margin: 12px;
+    width: 25px;
+    font-weight: 700;
+}
+
+.contain img {
+    width: 80px;
+    margin: 12px;
+}
+
+
+
+/* 4th section starts from here */
+.whywe {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 52px;
+    flex-wrap: wrap;
+    padding: 36px;
+}
+
+.whywe img {
+    width: 600px;
+    border: none;
+    border-radius: 16px;
+}
+
+.reason {
+    width: 500px;
+}
+
+.reason h2 {
+    font-weight: 700;
+    font-size: 36px;
+    color: #1e8449;
+}
+
+.reason p {
+    font-size: 20px;
+}
+
+.h2 {
+    position: relative;
+    bottom: 8px;
+}
+
+
+/* 5th section starts from here */
+
+.ourteam {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebf5fb;
+    padding: 24px;
+}
+
+.ourteam h2 {
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 600;
+    color: #196f3d;
+}
+
+.ourteam h3 {
+    text-align: center;
+}
+
+.members {
+    width: 80vw;
+    height: 70%;
+    margin-top: 24px;
+    padding: 12px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    gap: 12px;
+}
+
+
+.unknown {
+    border-radius: 16px;
+    width: 280px;
+    height: 400px;
+    box-shadow: 5px 5px 15px 5px #d0d3d4dc;
+    border: none;
+    position: relative;
+    background-color: white;
+}
+
+.profile {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid #f0f3f4;
+}
+
+.unknown h3 {
+    font-weight: 650;
+    margin-bottom: 12px;
+}
+
+.unknown p {
+    text-align: center;
+}
+
+.contacts {
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+    bottom: 0;
+    z-index: 1;
+}
+
+.contacts img {
+    width: 36px;
+    position: relative;        
+}
+
+
+/* 6th section starts from here */
+
+.contactus {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 36px;
+    padding: 36px;
+}
+
+.phonecall {
+    width: 800px;
+    height: 300px;
+    box-shadow: 5px 5px 15px 5px #ecf0f1;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.phonecall h2 {
+    font-weight: 600;
+    margin-left: 20px;
+    color: #196f3d;
+    font-size: 30px;
+}
+
+.callus {
+    width: 55%;
+}
+
+.callus p {
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.phonecall img {
+    width: 200px;
+    margin: 24px;
+}
+
+.timing {
+    display: flex;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+.timing div {
+    width: 9px;
+    height: 28px;
+    background-color: #196f3d;
+    border-radius: 12px;
+}
+
+.timing p {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 8px;
+}
+
+.callnow {
+    font-size: 15px;
+    padding: 10px 26px;
+    border: none;
+    color: white;
+    background-color: #1e8449;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    gap: 12px;
+}
+
+.callnow:hover {
+    background-color: #196f3d;
+}
+
+.callnow img {
+    width: 26px;
+    filter: invert(1);
+    margin: 4px 0px;
+}
+
+.fbpg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+}
+
+.fbpage,
+.fbgroup {
+    width: 500px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px 5px #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 24px;
+}
+
+.fbgroup img {
+    width: 90px;
+    margin: 24px;
+}
+
+.fbpage img {
+    width: 80px;
+    margin: 24px;
+}
+
+.pginfo button,
+.grpinfo button {
+    padding: 9px 18px;
+    border: none;
+    background-color: #0165E1;
+    color: white;
+    border-radius: 6px;
+    margin: 12px 0px;
+    font-size: 16px;
+}
+
+.pginfo h2,
+.grpinfo h2 {
+    font-weight: 600;
+}
+
+.pginfo button:hover,
+.grpinfo button:hover {
+    background-color: #0258c0;
+}
+
+
+
+/* 7th section starts from here */
+
+.ourlocation {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 36px;
+    background-color: #f7f9f9;
+}
+
+.ourlocation iframe {
+    width: 90%;
+    height: 40vh;
+    border-radius: 16px;
+}
+
+.ourlocation h2 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.ourlocation p {
+    margin-bottom: 12px;
+}
+
+/* Footer starts from here */
+
+footer {
+    width: 100%;
+    min-height: 35vh;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 36px;
+    padding: 24px;
+}
+
+footer li {
+    list-style: none;
+    margin: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    margin-left: 5px;
+}
+
+footer a:hover {
+    color: #196f3d;
+}
+
+.lastcall {
+    width: 90px;
+    position: relative;
+    bottom: 12px;
+    left: 12px;
+}
+
+.idk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 46px;
+}
+
+.yk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 24px;
+}
+
+.addr {
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 46px;
+    bottom: 24px;
+}
+
+.lastloc {
+    width: 90px;
+    position: relative;
+    left: 24px;
+}
+
+.branding img {
+    width: 250px;
+    position: relative;
+    bottom: 52px;
+}
+
+.branding h2 {
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    bottom: 130px;
+    left: 52px;
+}
+
+.toptx {
+    font-size: 24px;
+    font-weight: 600;
+    color: #196f3d;
+}

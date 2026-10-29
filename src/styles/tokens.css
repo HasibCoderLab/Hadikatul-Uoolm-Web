@@ -1,0 +1,153 @@
+/* ==========================================================================
+   HadiKatul Uloom — design tokens (RAW VALUES ONLY)
+   --------------------------------------------------------------------------
+   Every value below was read from the legacy site in `old/`
+   (see docs/DESIGN_AUDIT.md §3). Nothing here is a guess and nothing is a
+   generic SaaS palette: the identity is deep green + gold on warm off-white,
+   set in the Baloo Da 2 Bengali/Latin family.
+
+   This file declares custom properties only; the Tailwind `@theme` mapping
+   lives in `globals.css`, so the project has exactly one theme block.
+
+   Breakpoints are NOT declared here: `var()` is invalid inside a media query
+   condition, so the audited breakpoints are literals in `globals.css`.
+   Audited max-widths (old/responsive.css):
+   370 · 400 · 498 · 620 · 650 · 793 · 854 · 920 · 950 · 1100 · 1600.
+   ========================================================================== */
+
+:root {
+  /* ---------------------------------------------------------------- colour */
+  /* Primary — nav CTA, call button, headings, stat 1 */
+  --hu-green-600: #1e8449;
+  --hu-green-700: #196f3d; /* hover / active / headings */
+  --hu-green-500: #239b56; /* accent border */
+
+  /* Section tints */
+  --hu-green-50: #eafaf1; /* academic programme section */
+  --hu-blue-tint: #ebf5fb; /* team section */
+  --hu-gray-50: #f7f9f9; /* location section */
+
+  /* Neutral surfaces */
+  --hu-gray-100: #f0f3f4; /* card hover, avatar ring */
+  --hu-gray-150: #f4f6f7; /* mobile menu item */
+  --hu-gray-200: #ecf0f1; /* panel shadow, card borders on tinted sections */
+
+  /* Gold — hero CTA, stat 4, top-bar gradient start */
+  --hu-gold-500: #f1c40f;
+  --hu-gold-600: #d4ac0d;
+
+  /* Ink */
+  --hu-ink-700: #424949; /* nav links, body text */
+  --hu-ink-500: #626567; /* hero text shadow */
+  --hu-ink-200: #d7dbdd; /* stat text shadow */
+  --hu-white: #ffffff;
+
+  /* Supporting hues already present in the design, kept as tokens so no
+     component holds a raw literal */
+  --hu-line: #d0d3d4; /* borders + team card shadow */
+  --hu-stat-blue: #3dadfd; /* stat 2 (was rgb(61,175,253)) */
+  --hu-stat-coral: #ff6e76; /* stat 3 (was rgb(255,110,118)) */
+  --hu-facebook-500: #0165e1;
+  --hu-facebook-600: #0258c0;
+
+  /* Hero scrim + top bar gradient, as authored */
+  --hu-overlay: rgb(0 0 0 / 0.2);
+  --hu-gradient-topbar: linear-gradient(45deg, #f1c40f, #008000, #1e8449);
+
+  /* Scrollbar (old/extra.css) */
+  --hu-scrollbar-track: #f5f5f5;
+  --hu-scrollbar-thumb: #ccc;
+  --hu-scrollbar-thumb-hover: #999;
+
+  /* --------------------------------------------------------------- radius */
+  --hu-radius-sm: 6px; /* buttons */
+  --hu-radius-md: 10px; /* programme cards, facebook panels */
+  --hu-radius-lg: 12px; /* call panel, menu items */
+  --hu-radius-xl: 16px; /* photos, team cards, map */
+
+  /* -------------------------------------------------------------- shadows */
+  --hu-shadow-nav: 2px 2px 15px 2px rgb(75 74 74 / 0.473);
+  --hu-shadow-card: 5px 5px 15px 5px #d0d3d4dc;
+  --hu-shadow-panel: 5px 5px 15px 5px #ecf0f1;
+  --hu-shadow-panel-sm: 4px 4px 15px 5px #ecf0f1;
+  --hu-shadow-hero-text: 2px 2px 4px #626567;
+  --hu-shadow-stat-text: 3px 3px 4px #d7dbdd;
+
+  /* ----------------------------------------------------------------- type */
+  /* One family in the legacy source; it covers Bengali and Latin. */
+  --hu-font-sans:
+    var(--font-baloo), "Baloo Da 2", "Noto Sans Bengali", "Hind Siliguri", system-ui, sans-serif;
+
+  --hu-weight-body: 500;
+  --hu-weight-semibold: 600;
+  --hu-weight-stat: 650;
+  --hu-weight-bold: 700;
+
+  /* Audited desktop → tablet → phone sizes (DESIGN_AUDIT §3.2) */
+  --hu-text-hero: 56px;
+  --hu-text-hero-md: 40px;
+  --hu-text-hero-sm: 29px;
+
+  --hu-text-hero-sub: 20px;
+  --hu-text-hero-sub-md: 16px;
+  --hu-text-hero-sub-sm: 12px;
+
+  --hu-text-hero-eyebrow: 16px;
+  --hu-text-hero-eyebrow-md: 14px;
+  --hu-text-hero-eyebrow-sm: 12px;
+
+  --hu-text-section: 46px;
+  --hu-text-section-md: 36px;
+  --hu-text-section-sm: 24px;
+
+  --hu-text-section-sub: 24px;
+  --hu-text-section-sub-sm: 14px;
+
+  --hu-text-card-title: 26px;
+  --hu-text-card-title-sm: 19px;
+  --hu-text-card-body: 17px;
+  --hu-text-card-body-sm: 15px;
+
+  --hu-text-stat: 36px;
+  --hu-text-stat-sm: 22px;
+  --hu-text-stat-label: 18px;
+  --hu-text-stat-label-sm: 14px;
+
+  --hu-text-nav: 18px;
+  --hu-text-nav-sm: 15px;
+  --hu-text-topbar: 14px;
+  --hu-text-button: 15px;
+  --hu-text-button-sm: 13px;
+  --hu-text-body: 20px;
+  --hu-text-body-sm: 16px;
+  --hu-text-footer-heading: 24px;
+  --hu-text-footer-link: 17px;
+  --hu-text-footer-link-sm: 14px;
+
+  /* ------------------------------------------------------------ structure */
+  /* Derived: the legacy usable width was 70vw (≈1344px at 1920), shaded to a
+     round number. Documented as derived in DESIGN_AUDIT §5. */
+  --hu-container: min(90vw, 1280px);
+
+  --hu-nav-height: 64px;
+  --hu-topbar-height: 36px;
+  --hu-nav-height-desktop: 100px;
+
+  --hu-hero-height: 80vh;
+  --hu-hero-height-lg: 60vh;
+  --hu-hero-height-sm: 50vh;
+
+  /* Audited spacing rhythm */
+  --hu-space-2xs: 4px;
+  --hu-space-xs: 8px;
+  --hu-space-sm: 12px;
+  --hu-space-md: 16px;
+  --hu-space-lg: 24px;
+  --hu-space-xl: 36px;
+  --hu-space-2xl: 52px;
+  --hu-space-3xl: 120px;
+
+  /* -------------------------------------------------------------------- z */
+  --hu-z-header: 60;
+  --hu-z-drawer: 70;
+}

@@ -1,0 +1,713 @@
+@media (max-width: 1600px) {
+
+
+    /* 1st section starts from here */
+
+    .maintopic {
+        height: 60vh;
+    }
+
+    .maintopic img {
+        height: 60vh;
+    }
+
+}
+
+
+@media (max-width: 1100px) {
+
+    /* Navigation Starts From Here  */
+
+    .topnav {
+        display: none;
+    }
+
+    nav {
+        height: calc(100px - 36px);
+        display: flex;
+        align-items: center;
+        background-color: white;
+    }
+
+    .bottomnav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .navoptions button {
+        margin-right: 12px;
+    }
+
+
+    /* 5th section starts from here */
+
+    .members {
+        width: 96vw;
+    }
+
+
+    /* 6th section starts from here */
+
+    .fbpg {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .fbgroup,
+    .fbpage {
+        width: 400px;
+        height: 120px;
+    }
+
+    .fbgroup img,
+    .fbpage img {
+        width: 70px;
+        margin: 16px;
+    }
+
+    .pginfo button,
+    .grpinfo button {
+        padding: 6px 14px;
+        border: none;
+        margin: 10px 0px;
+        font-size: 13px;
+    }
+
+    .pginfo h2,
+    .grpinfo h2 {
+        font-weight: 600;
+        font-size: 19px;
+    }
+
+
+
+    /* Footer starts from here */
+
+    footer {
+        flex-wrap: wrap;
+        gap: 0px;
+        justify-content: flex-start;
+    }
+
+}
+
+
+
+
+@media (max-width: 950px) {
+
+    /* Navigation Starts From Here  */
+
+    .navoptions ul {
+        flex-direction: column;
+    }
+
+    .navoptions ul li a button {
+        display: block;
+    }
+
+    .navoptions .onclick {
+        position: absolute;
+        top: 0;
+        right: 0;
+        position: absolute;
+        top: 0;
+        width: 85vw;
+        height: 100vh;
+        background-color: white;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 36px;
+        z-index: 10;
+    }
+
+    .navoptions ul li {
+        width: 80%;
+        height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        background-color: #f4f6f7;
+        position: relative;
+        bottom: 80px;
+    }
+
+    .navoptions ul .btn {
+        background-color: white;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navoptions > a {
+        position: absolute;
+        right: 80px;
+    }
+
+    .cancle img {
+        width: 32px;
+    }
+
+    .cancle {
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 20px;
+    }
+
+
+    /* 2nd section starts from here */
+
+    .wehave {
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+
+    /* 3rd section starts from here */
+
+    .academicprogram h2 {
+        font-size: 36px;
+    }
+
+    .academicprogram h3 {
+        font-size: 24px;
+    }
+
+    /* 5th section starts from here */
+
+    .members {
+        width: 90vw;
+    }
+}
+
+
+@media (max-width: 920px) {
+
+    /* 6th section starts from here */
+
+    .fbpg {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fbgroup,
+    .fbpage {
+        width: 500px;
+        height: 150px;
+    }
+
+    .fbgroup img {
+        width: 90px;
+        margin: 24px;
+    }
+
+    .fbpage img {
+        width: 80px;
+        margin: 24px;
+    }
+
+    .pginfo button,
+    .grpinfo button {
+        padding: 9px 18px;
+        margin: 12px 0px;
+        font-size: 16px;
+    }
+
+    .pginfo h2,
+    .grpinfo h2 {
+        font-weight: 600;
+    }
+
+}
+
+
+@media (max-width: 854px) {
+
+    /* 1st section starts from here */
+
+    .titlebox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titlebox h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 6th section starts from here */
+
+    .teaching {
+        display: none;
+    }
+
+    .callus p {
+        margin: 0;
+        margin-left: 20px;
+        margin-bottom: 5px;
+    }
+
+    .callnow {
+        margin: 10px;
+        margin-left: 20px;
+    }
+
+    /* Footer starts from here */
+
+    .branding {
+        margin-right: 52px;
+    }
+}
+
+
+
+@media (max-width: 793px) {
+
+    /* Navigation starts from here */
+
+    .navoptions ul li a {
+        font-size: 15px;
+    }
+
+    /* 1st section starts from here */
+
+    .titlebox {
+        width: 90vw;
+    }
+
+    .titlebox p {
+        font-size: 14px;
+    }
+
+    .titlebox h1 span {
+        font-size: 40px;
+    }
+
+    .titlebox h1 {
+        font-size: 40px;
+    }
+
+    .titlebox h2 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* 6th section starts from here */
+    .phonecall {
+        padding: 12px;
+    }
+
+    .phonecall img {
+        width: 150px;
+        margin: 16px;
+        margin: 16px 12px;
+    }
+
+    .callus h2 {
+        font-size: 20px;
+    }
+
+    .callus p {
+        font-size: 14px;
+    }
+
+    .callnow img {
+        width: 22px;
+        margin-left: 0;
+        margin-right: 6px;
+    }
+
+    .callnow {
+        gap: 0;
+        padding: 0px 26px;
+        font-size: 14px;
+    }
+
+    .timing p {
+        font-size: 16px;
+    }
+
+    .timing div {
+        width: 8px;
+        height: 25px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    /* 4th section starts from here */
+    .whywe img {
+        width: 100%;
+    }
+
+    /* 7th section starts from here */
+    .ourlocation {
+        padding: 36px 0px;
+    }
+
+    .ourlocation h2 {
+        font-size: 28px;
+    }
+
+    .ourlocation p {
+        font-size: 15px;
+    }
+
+    .ourlocation iframe {
+        width: 100%;
+    }
+
+    .ourlocation iframe {
+        border-radius: 0;
+    }
+
+
+
+}
+
+@media (max-width: 620px) {
+
+    /* 6th section starts from here */
+    .fbpg {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .fbgroup,
+    .fbpage {
+        width: 400px;
+        height: 120px;
+    }
+
+    .fbgroup img,
+    .fbpage img {
+        width: 70px;
+        margin: 16px;
+    }
+
+    .pginfo button,
+    .grpinfo button {
+        padding: 6px 14px;
+        border: none;
+        margin: 10px 0px;
+        font-size: 13px;
+    }
+
+    .pginfo h2,
+    .grpinfo h2 {
+        font-weight: 600;
+        font-size: 19px;
+    }
+
+}
+
+
+@media (max-width: 498px) {
+
+
+    .nav{
+        position: sticky;
+        top: 0;
+    }
+    .brand {
+        margin: 0;
+    }
+
+    .brand img {
+        width: 150px;
+    }
+
+    .navoptions button {
+        font-size: 13px;
+        padding: 8px 20px;
+    }
+
+    /* 1st section starts from here */
+
+    .navoptions > a {
+        display: none;
+    }
+
+    .maintopic {
+        height: 50vh;
+    }
+
+    .maintopic img {
+        height: 50vh;
+    }
+
+    .titlebox {
+        width: 90vw;
+    }
+
+    .titlebox button {
+        font-size: 13px;
+    }
+
+    .titlebox p {
+        font-size: 12px;
+        text-shadow: 2px 2px 4px #62656780;
+    }
+
+    .titlebox h1 span {
+        font-size: 29px;
+        margin-bottom: 12px;
+        text-shadow: 2px 2px 4px #626567;
+    }
+
+    .titlebox h1 {
+        font-size: 29px;
+        margin: 12px;
+        margin-top: 6px;
+        text-shadow: 2px 2px 4px #6265677c;
+    }
+
+    .titlebox h2 {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    /* 2nd section starts from here */
+
+    .wehave {
+        gap: 55px;
+        padding: 52px 60px;
+    }
+
+    .this {
+        gap: 80px;
+    }
+
+    .students h2,
+    .mentors h2,
+    .experience h2,
+    .coaching h2 {
+        font-size: 22px;
+    }
+
+    .students p,
+    .mentors p,
+    .experience p,
+    .coaching p {
+        font-size: 14px;
+    }
+
+
+    /* 3rd section starts from here */
+
+    .academicprogram {
+        gap: 5px;
+    }
+
+    .academicprogram h2 {
+        font-size: 24px;
+    }
+
+    .academicprogram h3 {
+        font-size: 14px;
+    }
+
+    .programs {
+        margin: 24px 0;
+        width: 100%;
+    }
+
+    .onetoeight {
+        width: 100%;
+        height: 120px;
+    }
+
+    .contain img {
+        width: 60px;
+    }
+
+    .info h2 {
+        font-size: 19px;
+        text-align: left;
+    }
+
+    .info p {
+        font-size: 15px;
+    }
+
+    .onetoeight>img {
+        width: 20px;
+    }
+
+
+    /* 4th section starts from here */
+
+    .whywe {
+        gap: 30px;
+    }
+
+    .reason h2 {
+        font-size: 30px;
+    }
+
+    .reason p {
+        font-size: 16px;
+    }
+
+    /* 5th section starts from here */
+
+    .ourteam {
+        padding: 0px 26px;
+    }
+
+    .ourteam h2 {
+        font-size: 26px;
+    }
+
+    .ourteam h3 {
+        font-size: 14px;
+    }
+
+    /* 6th section starts from here */
+    .contactus {
+        padding: 24px;
+    }
+
+    .phonecall {
+        padding: 12px 0px;
+        position: relative;
+        height: 220px;
+        width: 100%;
+    }
+
+    .fbpg {
+        gap: 20px;
+    }
+
+    .phonecall>img {
+        width: 110px;
+        margin: 12px;
+        margin-right: 5px;
+        position: absolute;
+        bottom: 16px;
+        right: 60px;
+    }
+
+    .callus {
+        width: 80%;
+    }
+
+    .callus h2 {
+        font-size: 18px;
+    }
+
+    .callus p {
+        font-size: 13px;
+    }
+
+    .callnow img {
+        width: 18px;
+        margin: 12px;
+        margin-left: 0;
+        margin-right: 6px;
+    }
+
+    .callnow {
+        gap: 0;
+        padding: 0px 20px;
+        font-size: 12px;
+    }
+
+    .timing p {
+        font-size: 14px;
+    }
+
+    .timing div {
+        width: 6px;
+        height: 20px;
+    }
+
+    .pginfo h2,
+    .grpinfo h2 {
+        font-size: 14px;
+    }
+
+    .fbpage,
+    .fbgroup {
+        width: 300px;
+    }
+
+
+    /* 7th section starts from here */
+
+    .ourlocation h2 {
+        font-size: 21px;
+    }
+
+    .ourlocation p {
+        font-size: 14px;
+    }
+
+
+    /* Footer starts from here */
+    .branding {
+        position: relative;
+        bottom: 20px;
+        left: -30px;
+    }
+
+    .branding img {
+        width: 200px;
+    }
+
+    .branding h2 {
+        font-size: 16px;
+    }
+
+    footer ul {
+        position: relative;
+        bottom: 120px;
+    }
+    .toptx{
+        font-size: 20px;
+    }
+
+    .lastani ul li a, .lastani ul li{
+    font-size: 14px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    /* 6th section starts from here */
+
+    .phonecall>img {
+        width: 100px;
+        margin: 12px;
+        margin-right: 5px;
+        position: absolute;
+        bottom: 24px;
+        right: 16px;
+    }
+
+}
+
+
+@media (max-width: 370px) {
+
+    /* 6th section starts from here */
+    .phonecall>img {
+        display: none;
+    }
+
+    .callus {
+        width: 100%;
+    }
+
+}
